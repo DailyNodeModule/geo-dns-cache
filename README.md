@@ -1,0 +1,3 @@
+This project is a simple DNS cache written node.js and using MongoDB as a backend. The server will attempted to locate the geographically closest DNS server with each request. The objective of this project is to test out [dns-packet](https://github.com/mafintosh/dns-packet), a DNS packet encoder/decoder for node.js.
+
+Run with `docker-compose up` you can then query using a DNS client (e.g. dig) on UDP 3053.

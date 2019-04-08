@@ -1,0 +1,16 @@
+version: '2'
+services:
+  app:
+    build: .
+    environment:
+    - MONGO_URL=mongodb://mongo:27017
+    links:
+    - mongo
+    ports:
+    - 3053:3053/udp
+  mongo:
+    image: mongo
+    volumes:
+      - mongo:/data
+volumes:
+  mongo: {}
